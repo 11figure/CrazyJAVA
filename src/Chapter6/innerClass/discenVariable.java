@@ -6,7 +6,7 @@ package Chapter6.innerClass;
  * @Date: Create 0:01 2017/9/10
  * @Modified By:
  */
-public class discenVariable {
+public class DiscenVariable {
 
     private String prop = "外部类属性";
 
@@ -22,14 +22,14 @@ public class discenVariable {
         public void info() {
             String prop = "局部变量";
             //通过外部类类名.this.varName  访问外部类实例属性
-            System.out.println(discenVariable.this.prop);
+            System.out.println(DiscenVariable.this.prop);
             //通过this访问内部类实例的属性
             System.out.println(this.prop);
             //直接访问局部变量
             System.out.println(prop);
 
             /*
-            一下三个都会编译报错
+            以下三个都会编译报错
              */
 //            private static String name = "inClass";
 //            static{
@@ -49,7 +49,7 @@ public class discenVariable {
     }
 
     public static void main(String[] args) {
-        new discenVariable().test();
+        new DiscenVariable().test();
         //这个会编译报错
         /**
          * 根据静态成员不能访问非静态成员的规则，外部类的静态方法，静态代码块不能访问非静态内部类。
